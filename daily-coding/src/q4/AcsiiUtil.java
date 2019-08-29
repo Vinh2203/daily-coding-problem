@@ -1,6 +1,5 @@
 package q4;
 
-
 public class AcsiiUtil {
 	public static void main(String args[]) {
 
@@ -9,22 +8,21 @@ public class AcsiiUtil {
 		char c = scanChar(b);
 		System.out.println("Corresponding Letter = " + c);
 	}
-	
-	public static char scanChar(String s)
-	{
+
+	public static char scanChar(String s) {
 		for (char tmp = 'A'; tmp <= 'Z'; tmp++) {
-			
+
 			String artCompare = printchar(tmp);
-			
+
 			System.out.println(tmp);
-			
-			if(artCompare.equals(s)) {
+
+			if (artCompare.equals(s)) {
 				return tmp;
 			}
 		}
 		return '?';
 	}
-	
+
 	static final char START_CHAR = 'a';
 	static final char END_CHAR = 'z';
 	static final char DELIMITER_CHAR = END_CHAR + 1;
@@ -49,13 +47,11 @@ public class AcsiiUtil {
 		else {
 			start = 103;
 			end = 107;
-
 		}
 
 		for (int i = 0; i < l; i++) {
 			v = v + "\n" + rowArray[i].substring(start, end);
 		}
 		return v;
-
 	}
 }
